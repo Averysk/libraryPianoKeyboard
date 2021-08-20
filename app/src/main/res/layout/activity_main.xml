@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#80FFFFFF"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:text="上一页"
+        android:textSize="10sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_weight="1"
+        android:focusable="true"
+        android:maxHeight="4dp"
+        android:minHeight="4dp"
+        app:layout_constraintBottom_toBottomOf="@+id/button1"
+        app:layout_constraintLeft_toRightOf="@+id/button1"
+        app:layout_constraintTop_toTopOf="@+id/button1"
+        app:layout_constraintWidth_percent="0.3" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:text="下一页"
+        android:textSize="10sp"
+        app:layout_constraintLeft_toRightOf="@+id/seekBar"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:text="+"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toRightOf="@+id/button2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textView1"
+        android:layout_width="50dp"
+        android:layout_height="20dp"
+        android:lines="2"
+        android:text="一屏白键个数"
+        android:textSize="8sp"
+        android:gravity="center_vertical"
+        app:autoSizeMaxTextSize="12sp"
+        app:autoSizeMinTextSize="1sp"
+        app:autoSizeStepGranularity="1sp"
+        app:layout_constraintLeft_toRightOf="@+id/button3"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textView2"
+        android:layout_width="50dp"
+        android:layout_height="20dp"
+        android:lines="2"
+        android:text="8"
+        android:gravity="center"
+        android:textSize="12sp"
+        app:autoSizeMaxTextSize="12sp"
+        app:autoSizeMinTextSize="1sp"
+        app:autoSizeStepGranularity="1sp"
+        app:layout_constraintLeft_toRightOf="@+id/button3"
+        app:layout_constraintTop_toBottomOf="@+id/textView1" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:text="-"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toRightOf="@+id/textView1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:text="+"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toRightOf="@+id/button4"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textView3"
+        android:layout_width="50dp"
+        android:layout_height="20dp"
+        android:lines="2"
+        android:text="黑键高度比例"
+        android:textSize="8sp"
+        android:gravity="center_vertical"
+        app:autoSizeMaxTextSize="12sp"
+        app:autoSizeMinTextSize="1sp"
+        app:autoSizeStepGranularity="1sp"
+        app:layout_constraintLeft_toRightOf="@+id/button5"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textView4"
+        android:layout_width="50dp"
+        android:layout_height="20dp"
+        android:lines="2"
+        android:text="0.6f"
+        android:gravity="center"
+        android:textSize="12sp"
+        app:autoSizeMaxTextSize="12sp"
+        app:autoSizeMinTextSize="1sp"
+        app:autoSizeStepGranularity="1sp"
+        app:layout_constraintLeft_toRightOf="@+id/button5"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:text="-"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toRightOf="@+id/textView3"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:text="按键颜色切换"
+        android:textSize="10sp"
+        app:layout_constraintLeft_toRightOf="@+id/button6"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:text="字体\n样式1"
+        android:textSize="10sp"
+        app:layout_constraintLeft_toRightOf="@+id/button7"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.aversyk.librarypianokeyboard.keyBoard.PianoKeyBoard
+        android:id="@+id/keyBoard"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#66000000"
+        app:blackKeyDrawable="@drawable/ic_piano_keyboard_blackkey_up"
+        app:blackKeyHeightRatio="0.6"
+        app:blackKeyPressedDrawable="@drawable/ic_piano_keyboard_blackkey_down_red"
+        app:keyBoardDefaultStartPosition="9"
+        app:keyCount="8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button1"
+        app:pronuncTextColor="#000000"
+        app:pronuncTextSize="12sp"
+        app:pronuncTextType="2"
+        app:pronuncTextYRatio="0.9"
+        app:whiteKeyDrawable="@drawable/ic_piano_keyboard_whitekey_up"
+        app:whiteKeyPressedDrawable="@drawable/ic_piano_keyboard_whitekey_down_red" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

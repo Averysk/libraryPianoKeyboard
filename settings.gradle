@@ -1,0 +1,3 @@
+include ':libraryPianoKeyboard'
+include ':app'
+rootProject.name = "DemoPianoKeyBoard"
