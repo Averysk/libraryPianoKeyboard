@@ -13,7 +13,7 @@ import com.aversyk.librarypianokeyboard.R;
  */
 public class SoundPlayUtils {
     // SoundPool对象
-    private static SoundPool mSoundPlayer = new SoundPool(10, AudioManager.STREAM_MUSIC, 5);
+    private static SoundPool mSoundPlayer;
     @SuppressLint("StaticFieldLeak")
     private static SoundPlayUtils soundPlayUtils;
     // 上下文
@@ -27,6 +27,9 @@ public class SoundPlayUtils {
     public static SoundPlayUtils init(Context context) {
         if (soundPlayUtils == null) {
             soundPlayUtils = new SoundPlayUtils();
+        }
+        if (mSoundPlayer == null) {
+            mSoundPlayer = new SoundPool(10, AudioManager.STREAM_MUSIC, 5);
         }
 
         // 初始化声音
@@ -128,7 +131,9 @@ public class SoundPlayUtils {
      * @param soundId
      */
     public static void play(int soundId) {
-        mSoundPlayer.play(soundId, 1f, 1f, 0, 0, 1f);
+        if (mSoundPlayer != null) {
+            mSoundPlayer.play(soundId, 1f, 1f, 0, 0, 1f);
+        }
     }
 
     /**
@@ -136,7 +141,9 @@ public class SoundPlayUtils {
      * @param soundId
      */
     public static void stop(int soundId) {
-        mSoundPlayer.stop(soundId);
+        if (mSoundPlayer != null) {
+            mSoundPlayer.stop(soundId);
+        }
     }
 
     /**
